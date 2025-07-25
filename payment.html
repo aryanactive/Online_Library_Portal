@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment - Online Bookstore</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Online Bookstore</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Payment Content -->
+  <section class="content">
+    <div class="container">
+      <h2>Payment</h2>
+      <p>Please complete your payment:</p>
+      <!-- Form for payment -->
+      <form id="paymentForm" action="https://test.cashfree.com/billpay/checkout/post/submit" method="post">
+        <input type="hidden" name="appId" value="YOUR_APP_ID">
+        <input type="hidden" name="orderId" value="YOUR_ORDER_ID">
+        <input type="hidden" name="orderAmount" value="YOUR_ORDER_AMOUNT">
+        <input type="hidden" name="orderCurrency" value="INR">
+        <input type="hidden" name="orderNote" value="Payment for books">
+        <input type="hidden" name="customerName" value="Customer Name">
+        <input type="hidden" name="customerPhone" value="Customer Phone">
+        <input type="hidden" name="customerEmail" value="customer@example.com">
+        <input type="hidden" name="returnUrl" value="http://yourwebsite.com/payment-success.html">
+        <input type="hidden" name="notifyUrl" value="http://yourwebsite.com/payment-notify.html">
+        <input type="hidden" name="signature" value="GENERATED_SIGNATURE">
+        <button type="submit">Pay Now</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Online Bookstore. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
